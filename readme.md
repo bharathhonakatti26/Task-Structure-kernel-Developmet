@@ -52,10 +52,6 @@ Once the module is loaded, it will automatically start listing tasks using DFS a
 - `tasks_lister_dfs.c`: The main source code for the kernel module.
 - `Makefile`: The makefile for building the kernel module.
 
-## License
-
-This project is licensed under the GPL License - see the [LICENSE](LICENSE) file for details.
-
 ## Author
 
 - Proxy_021
