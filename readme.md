@@ -13,7 +13,7 @@ This project is a Linux kernel module that lists tasks (processes) using a Depth
 1. Clone the repository:
     ```sh
     git clone https://github.com/bharathhonakatti26/Task-Structure-kernel-Developmet.git
-    cd your-repo-name
+    cd Task-Structure-kernel-Developmet-main
     ```
 
 2. Build the module:
