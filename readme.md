@@ -8,6 +8,28 @@ This project is a Linux kernel module that lists tasks (processes) using a Depth
 - Prints task information including PID, UID, GID, command path, and state.
 - Supports various task states such as `TASK_RUNNING`, `TASK_INTERRUPTIBLE`, `TASK_UNINTERRUPTIBLE`, etc.
 
+## Prerequisites
+
+1. **Linux Kernel Headers**:
+   - Ensure that the Linux kernel headers are installed on your system.
+   - On Debian-based systems (like Ubuntu), you can install them using:
+     ```sh
+     sudo apt-get install linux-headers-$(uname -r)
+     ```
+
+2. **Build Tools**:
+   - You need the necessary build tools like `make` and `gcc` to compile the kernel module.
+   - On Debian-based systems, you can install them using:
+     ```sh
+     sudo apt-get install build-essential
+     ```
+
+3. **Kernel Module Development Environment**:
+   - Ensure you have the kernel module development environment set up on your system.
+
+4. **Root Privileges**:
+   - You need root privileges to load and unload kernel modules. Use `sudo` for commands like `insmod` and `rmmod`.
+
 ## Installation
 
 1. Clone the repository:
@@ -54,7 +76,7 @@ Once the module is loaded, it will automatically start listing tasks using DFS a
 
 ## Author
 
-- Proxy_021
+- Proxy_021 - [My Portfolio](https://bharathhonakatti26.github.io/portfolio/)
 
 ## Acknowledgments
 

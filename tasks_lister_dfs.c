@@ -7,7 +7,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Proxy_021");
-MODULE_DESCRIPTION("A Kernel Module for Listing Tasks Using DFS");
+MODULE_DESCRIPTION("A Kernel Module for Listing Tasks");
 MODULE_VERSION("1.1");
 
 const char* task_state_to_string(long state);
@@ -47,7 +47,7 @@ void dfs(struct task_struct *task)
         unsigned int gid = task_next->cred->gid.val;
         const char *command = task_next->comm;
 
-        printk(KERN_INFO "PID: %d\nUID: %u\nGID: %u\nCommand Path: %s\nState: %s\n\n", 
+        printk(KERN_INFO "Process ID: %d\nUser ID : %u\nGroup ID: %u\nCommand Path: %s\nState: %s\n\n",
                task_next->pid, uid, gid, command, state_str);
 
         dfs(task_next);
@@ -56,7 +56,7 @@ void dfs(struct task_struct *task)
 
 int tasks_lister_dfs_init(void)
 {
-    printk(KERN_INFO "Loading module...\n");
+    printk(KERN_INFO "Loading module nd getting all tasks ..\n");
 
     dfs(&init_task);
 
